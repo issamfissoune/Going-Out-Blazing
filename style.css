@@ -1,0 +1,73 @@
+@import url("https://fonts.googleapis.com/css2?family=Gemunu+Libre:wght@300&display=swap");
+
+@import url('https://fonts.googleapis.com/css2?family=Arizonia&display=swap');
+
+body {
+  font-family: "Gemunu Libre", sans-serif;
+  background-color: white;
+  /* background-image: url(./heaven.jpg);
+  position: relative;
+  background-size: cover; */
+  margin: 0;
+  padding: 0;
+}
+
+header{
+    font-family: 'Arizonia', cursive;
+    display: flex;
+    justify-content: center;
+    padding: 1em;
+    font-size: 200%;
+    background: url(./pictures/fire.jpeg);
+    background-position: 0, 0;
+    animation: back 20s linear infinite;
+    color:white;
+}
+
+nav{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100vw;
+    height: 50px;
+}
+.dark, .light{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-position: 0, 0;
+    animation: up 20s linear infinite;
+   
+}
+ .dark{
+    background: url(./pictures/skulls.jpeg);
+    background-position: center;
+    background-size: cover;
+}
+
+.light{
+    background: url(./pictures/sky.jpeg);
+    background-position: center;
+    background-size: cover;
+}
+
+a{
+    display: flex;
+    text-decoration: none;
+    color: white;
+    
+}
+    
+
+@keyframes back{
+    100%{
+        background-position: 2000px 0px;
+    }
+}
+
+@keyframes up{
+    100%{
+        background-position: 0px 2000px;
+    }
+}
