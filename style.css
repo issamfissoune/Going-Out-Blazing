@@ -2,187 +2,186 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Arizonia&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+
 body {
-  font-family: "Gemunu Libre", sans-serif;
-  background-color:#161623;
-  /* display: flex; */
+  /* font-family: "Gemunu Libre", sans-serif; */
+  font-family: 'VT323', monospace;
+  background: linear-gradient(45deg, #7a7a58, #000);
+  display: flex;
   justify-content: center;
-  align-items: center;
   flex-wrap: wrap;
-  /* min-height: 100vh; */
   margin: 0;
   padding: 0;
 }
 
-header{
-    font-family: 'Arizonia', cursive;
-    display: flex;
-    justify-content: center;
-    padding: 1em;
-    font-size: 200%;
-    background: url(./pictures/fire.jpeg);
-    background-position: 0, 0;
-    animation: back 20s linear infinite;
-    color:white;
-}
-
-nav{
-    display: flex;
-    justify-content: space-evenly;
-    width: 100vw;
-    height: 50px;
-}
-.dark, .light{
-    width: 50%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-position: 0, 0;
-    animation: up 20s linear infinite;
-   
-}
- .dark{
-    background: url(./pictures/skulls.jpeg);
-    background-position: center;
-    background-size: cover;
-}
-
-.light{
-    background: url(./pictures/sky.jpeg);
-    background-position: center;
-    background-size: cover;
-}
-
-.bar{
-    display: flex;
-    text-decoration: none;
-    color:white;
-    
-    
-}
-
-section{
-    position: relative;
-}
-
-.container{
-    position: relative;
-    z-index: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    margin: 40px 0;
-}
-
-.container .card{
-    position: relative;
-    width: 300px;
-    height: 400px;
-    background: rgba(255, 255, 255, 0.05);
-    margin: 20px;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
-    border-radius: 15px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    backdrop-filter: blur(10px);
-
-}
-
-.container .card .content{
-    position: relative;
+main{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    opacity: 0.5;
-    transition: 0.5s;
+    height: 100vh;
+    width: 100vw;
+
     
 }
 
-.container .card:hover .content{
-    opacity: 1;
-    transform: translateY(-20px);
+
+.typewriter{
+    
+    width: 30ch;
+  animation: typing 2s steps(22), blink .5s step-end infinite alternate;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid;
+  font-family: monospace;
+  font-size: 2em;
+  color: black;
 }
 
-.container .card .content .imgBx{
-    position: relative;
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    overflow: hidden;
-    border: 10px solid rgba(0, 0, 0, 0.25);
-}
+@keyframes typing {
+    from { width: 0 }
+    
+  }
 
-.container .card .content .imgBx img{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
+  @keyframes blink {
+    50% {
+        border-color: transparent
+      }
+  }
 
-.container .card .content .contentBx h3{
-    color: #fff;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    font-weight: 500;
-    font-size: 18px;
-    text-align: center;
-    margin: 20px 0 10px;
-    line-height: 1.1em;
-
-}
-.container .card .content .contentBx h3 span{
-    font-size: 12px;
-    font-weight: 300;
-    text-transform: initial;
-}
-.container .card .sci{
-    position: absolute;
-    bottom: 50px;
-    display: flex;
-}
-.container .card .sci li .socials {
-    list-style: none;
-    margin: 0 10px;
-    transform: translateY(40px);
-    transition: 0.5s;
-    opacity: 0;
-    transition-delay: calc(0.1s * var(--i));
-
-}
-.container .card:hover .sci li .socials{
-    transform: translateY(0px);
-    opacity: 1;
-    color: white;
-    text-decoration: none;
-    font-size: 25px;
-}
-
-.socials{
-    text-decoration: none;
-    list-style:none;
-}
-ul{
-    list-style: none;
+  .wrapper {
+    
+    
     display: flex;
     align-items: center;
     justify-content: center;
-}
-    
+    flex-wrap: wrap;
+  } 
+   section{ 
+      display: flex;
+      justify-content: center;
+      
+      align-items: center;
+  }
 
-@keyframes back{
-    100%{
-        background-position: 2000px 0px;
+  a{
+    position: relative;
+    display: inline-block;
+    padding: 25px 30px;
+    margin: 40px 40px;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: 0.5s;
+    letter-spacing: 4px;
+    overflow: hidden;
+    margin-right: 50px;
+   
+}
+a:hover{
+    background: #495e35;
+    color: #050801;
+    box-shadow: 0 0 5px #495e35,
+                0 0 25px #495e35,
+                0 0 50px #495e35,
+                0 0 200px #495e35;
+     -webkit-box-reflect:below 1px linear-gradient(transparent, #0005);
+}
+
+
+a span{
+    position: absolute;
+    display: block;
+}
+a span:nth-child(1){
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg,transparent,#495e35);
+    animation: animate1 1s linear infinite;
+}
+@keyframes animate1{
+    0%{
+        left: -100%;
+    }
+    50%,100%{
+        left: 100%;
+    }
+}
+a span:nth-child(2){
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg,transparent,#495e35);
+    animation: animate2 1s linear infinite;
+    animation-delay: 0.25s;
+}
+@keyframes animate2{
+    0%{
+        top: -100%;
+    }
+    50%,100%{
+        top: 100%;
+    }
+}
+a span:nth-child(3){
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg,transparent,#495e35);
+    animation: animate3 1s linear infinite;
+    animation-delay: 0.50s;
+}
+@keyframes animate3{
+    0%{
+        right: -100%;
+    }
+    50%,100%{
+        right: 100%;
     }
 }
 
-@keyframes up{
-    100%{
-        background-position: 0px 2000px;
-    }
+
+a span:nth-child(4){
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg,transparent,#495e35);
+    animation: animate4 1s linear infinite;
+    animation-delay: 0.75s;
 }
+@keyframes animate4{
+    0%{
+        bottom: -100%;
+    }
+    50%,100%{
+        bottom: 100%;
+    }
+} 
+
+.main-wrapper{
+    height: 50%;
+    width: 100%;
+    padding-top: 25%;
+}
+
+.buttons{
+    transform: translateY(50px);
+    transition: 2.0s;
+    opacity: 0;
+
+}
+
+:hover .buttons{
+    transform: translateY(0px);
+    opacity: 1;
+}
+
+
+
